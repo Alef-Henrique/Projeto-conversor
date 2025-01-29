@@ -31,7 +31,7 @@ function convertValues() {
             convertValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
-            }).format(inputCurrencyValue / dolarToday)  // Real para Dólar
+            }).format(inputCurrencyValue / dolarToday);  // Real para Dólar
 
         } else if (currencySelect.value === "euro") {
             convertValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
@@ -66,7 +66,7 @@ function convertValues() {
                 currency: "EUR"
             }).format(inputCurrencyValue * dolarToday / euroToday);  // Dólar para Euro
         }
-        else if (currencySelect.value === "euro") {
+        else if (currencySelect.value === "libra") {
             convertValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
                 style: "currency",
                 currency: "GBP"
@@ -86,13 +86,14 @@ function convertValues() {
                 style: "currency",
                 currency: "BRL"
             }).format(inputCurrencyValue * euroToday);  // Euro para Real
+
         } else if (currencySelect.value === "dolar") {
             convertValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
             }).format(inputCurrencyValue * euroToday / dolarToday);  // Euro para Dólar
         }
-        else if (currencySelect.value === "dolar") {
+        else if (currencySelect.value === "libra") {
             convertValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
                 style: "currency",
                 currency: "GBP"
@@ -102,9 +103,9 @@ function convertValues() {
 
     else if(currencyOriginSelect.value === "libra"){
         //libra -> Real
-        convertValueToConvert.innerHTML = new Intl.NumberFormat('en-GB', {
-            style: 'currency',
-            currency: 'GBP',
+        convertValueToConvert.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP",
           }).format(inputCurrencyValue);
 
           if (currencySelect.value === "real") {
